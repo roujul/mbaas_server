@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%p] %c - %m%n</Pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.smartwavesa.server" level="DEBUG"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="org.springframework.web" level="INFO"/>
+    <logger name="org.springframework.security" level="INFO"/>
+    <logger name="org.springframework.data.mongodb.core.MongoDbUtils" level="INFO"/>
+    <logger name="org.springframework.data.mongodb.repository.query.MongoQueryCreator" level="INFO"/>
+    <logger name="org.springframework.cache" level="WARN"/>
+    <logger name="org.springframework.boot.actuate.audit.listener.AuditListener" level="INFO"/>
+    <logger name="org.springframework.data" level="DEBUG"/>
+    <root level="${logback.loglevel}">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
